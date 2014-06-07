@@ -1,0 +1,22 @@
+list of genres
+Action, Gryffindor
+Adventure, Gryffindor
+Animation, Hufflepuff
+Biography, Ravenclaw
+Comedy, Hufflepuff
+Crime, Slytherin
+Documentary, Ravenclaw
+Drama, Ravenclaw
+Family, Hufflepuff
+Fantasy, Hufflepuff
+Film-Noir, Ravenclaw
+History, Ravenclaw
+Horror, Slytherin
+Musical, Hufflepuff
+Mystery, Ravenclaw
+Romance, Hufflepuff
+Sci-Fi, Gryffindor
+Sport, Gryffindor
+Thriller, Slytherin
+War, Slytherin
+Western, Gryffindor
