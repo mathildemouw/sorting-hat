@@ -1,8 +1,15 @@
+html {
+	font-family: sans-serif;
+}
 .container {
-  margin: 20px auto;
+  margin: 200px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
+}
+
+div #movies {
+	
 }
 
 th {
