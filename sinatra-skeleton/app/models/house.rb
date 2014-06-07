@@ -1,10 +1,11 @@
 class House
-  @houses = ["G", "S", "H", "R"]
+  class << self
+    attr_reader :house_names
+  end
 
-  #factory to instantiate the different house
-
+  @house_names = ["Gryffindor", "Slytherin", "Hufflepuff", "Ravenclaw"]
 
   def describe_house
-    #for a given house, list out the genres that it has from the csv
+    #TODO for a given house, list out the genres that it has from the csv
   end
 end
