@@ -25,7 +25,7 @@ function setupAddMovie() {
   }
 
 function setupGetSorted(){
-  $('.sort').on("click", (function(e) {
+  $('.sort').on("click", function(e) {
     e.preventDefault()
     $.ajax({
       type: "POST",
@@ -35,5 +35,9 @@ function setupGetSorted(){
       console.log(data)
     })
   })
-  )
+}
+
+function showHouse ( house, newHeight ) {
+  newWidth = newHeight * 0.80;
+  $('#'+house ).animate( {height: newHeight, width: newWidth}, 1500 );
 }
