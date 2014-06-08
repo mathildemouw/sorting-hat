@@ -12,7 +12,7 @@ class HouseCalculator
   def self.calculate_total_house_points(movie_hash)
     genres = movie_hash.values.flatten
     genres.each do |genre|
-      @@house_points[fetch_house(genre)] += 1
+      @@house_points[fetch_house(genre)] += 1 if fetch_house(genre)
     end
     return @@house_points # => {H: 0, R: 1, G: 1, S: 0} or more
   end
