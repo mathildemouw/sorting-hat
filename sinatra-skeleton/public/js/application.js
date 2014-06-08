@@ -32,7 +32,14 @@ function setupGetSorted(){
       url: "/house",
       data: movieList,
     }).done(function(data){
-      console.log(data)
+      houses = ["Gryffindor", "Slytherin", "Hufflepuff", "Ravenclaw"]
+      for( var i = 0; i < houses.length; i++){
+        var parsedData = jQuery.parseJSON(data);
+        // debugger
+        showHouse(houses[i].toLowerCase(), (50* parseInt(parsedData[houses[i]])));
+      }
+      // showHouse('gryffindor', (100* data["Gryffindor"]);
+      // console.log((data["Gryffindor"]));
     })
   })
 }
