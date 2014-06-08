@@ -36,4 +36,9 @@ function setupGetSorted(){
     })
   })
   )
+});
+
+function showHouse ( house, newHeight ) {
+  newWidth = newHeight * 0.80;
+  $('#'+house ).animate( {height: newHeight, width: newWidth}, 1500 );
 }
