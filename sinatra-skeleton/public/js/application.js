@@ -8,14 +8,11 @@ $(document).ready(function() {
       type: 'GET',
       url: "http://www.omdbapi.com/?i=&t=" + imdbTitle,
       }).done(function(data) {
-        console.log(data)
         var genres = data.match(/\"Genre\":\"(.*)\",\"Director\"/)[1]
         genres = genres.split(", ");
         movieList[imdbTitle] = genres;
-        console.log(movieList)
-      }).fail(function(){console.log("you failed")})
+      }).fail(function(){console.log("Your request was bad and you should feel bad!")})
     })
-
 
   $('#sortByMovies').submit(function(event) {
     movieList
