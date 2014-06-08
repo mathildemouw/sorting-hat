@@ -1,9 +1,18 @@
+var movieList = {}; // {"Fargo": ["Crime", "Comedy"], "The Lion King": ["Drama", "Comedy"] }
 $(document).ready(function() {
+  setupAddMovie();
+  setupGetSorted();
+});
 
-  var movieList = {};
-  $('#userMovieInput').submit(function() {
-    event.preventDefault();
+function appendTitle(title) {
+  $('.movie-list').append("<li>" + title + "</li>")
+}
+
+function setupAddMovie() {
+  $('#userMovieInput').submit(function(e) {
+    e.preventDefault();
     var imdbTitle =  $('#movieTitle').val();
+    appendTitle(imdbTitle);
     $.ajax({
       type: 'GET',
       url: "http://www.omdbapi.com/?i=&t=" + imdbTitle,
@@ -13,8 +22,18 @@ $(document).ready(function() {
         movieList[imdbTitle] = genres;
       }).fail(function(){console.log("Your request was bad and you should feel bad!")})
     })
+  }
 
-  $('#sortByMovies').submit(function(event) {
-    movieList
+function setupGetSorted(){
+  $('.sort').on("click", (function(e) {
+    e.preventDefault()
+    $.ajax({
+      type: "POST",
+      url: "/house",
+      data: movieList,
+    }).done(function(data){
+      console.log(data)
+    })
   })
-});
+  )
+}
