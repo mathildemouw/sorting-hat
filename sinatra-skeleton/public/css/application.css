@@ -5,8 +5,14 @@ html {
   margin: 100px auto;
   width: 800px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  border: 1px solid black;
+  text-align: center;
 }
+
+h1 {
+  text-align: center;
+}
+
 form{
   padding: 10px 10px 10px 10px;
 }
@@ -16,14 +22,19 @@ div #movies {
 div #house-jars{
   margin:auto;
   width: 95%;
-  height: 40%;
 }
 div .jar {
   position: relative;
   width: 100px;
   height: 145px;
-  float: left;
+  /*float: left;*/
   margin: 5% 2% 5% 2%;
+  display: inline-block;
+}
+
+.movie-list {
+  list-style-type: none;
+  margin-left: -30px;
 }
 img{
 height: 50%;
@@ -32,3 +43,4 @@ width: 90%;
 th {
   text-align: left;
 }
+

@@ -13,6 +13,7 @@ function setupAddMovie() {
     e.preventDefault();
     var imdbTitle =  $('#movieTitle').val();
     appendTitle(imdbTitle);
+    $('#movieTitle').val('')
     $.ajax({
       type: 'GET',
       url: "http://www.omdbapi.com/?i=&t=" + imdbTitle,
@@ -35,11 +36,8 @@ function setupGetSorted(){
       houses = ["Gryffindor", "Slytherin", "Hufflepuff", "Ravenclaw"]
       for( var i = 0; i < houses.length; i++){
         var parsedData = jQuery.parseJSON(data);
-        // debugger
         showHouse(houses[i].toLowerCase(), (50* parseInt(parsedData[houses[i]])));
       }
-      // showHouse('gryffindor', (100* data["Gryffindor"]);
-      // console.log((data["Gryffindor"]));
     })
   })
 }
